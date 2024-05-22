@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} Footwear Details {% endblock %}
+
+{% block content %}
+    <h1 style="text-align:center">Footwears</h1>
+
+    <div class="products-container">
+        {% for i in gul %}
+            <div class="footwear-list">
+                <img src="{{ i.image.url }}" alt="Product Image">
+                <a>{{ i.name }}</a>
+                <a>{{ i.price }}</a>
+                <a href="{% url 'products:detail-review' i.pk%}">Detail</a>
+                <a href="{% url 'products:footwear-delete' i.pk%}">Delete</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

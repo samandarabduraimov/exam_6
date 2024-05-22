@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expensive Products</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Expensive</h1>
+        <div class="footwear-detail">
+            {% for products in footwear %}
+                <div class="footwear-list">
+                    <img src="{{ footwear.image.url }}" alt="Footwear Image">
+                    <h2>{{ footwear.name }}</h2>
+                    <p>Price: {{ footwear.price }}</p>
+                    <a href="{% url 'products:detail-review' footwear.pk %}">Detail</a>
+                    <a href="{% url 'products:footwear-delete' footwear.pk %}">Delete</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

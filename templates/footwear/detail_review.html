@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+</head>
+<body>
+<h1>Details</h1>
+<img src="{{ footwear.image.url }}" alt="Product Image">
+{% for i in view_comment %}
+    <h2>user:{{ i.first_name }}</h2>
+    <h3>star:{{ i.star_given }}</h3>
+    <h3>comment:{{ i.review }}</h3>
+    <hr>
+{% endfor %}
+
+<a href="{% url 'products:add-review' footwear.pk%}">Add comment</a>
+<a href="{% url 'products:detail-info' footwea.pk%}">Type</a>
+</body>
+</html>

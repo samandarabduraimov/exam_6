@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+</head>
+<body>
+<h1>Users Information</h1>
+
+{% for item in informations %}
+    <div class="item-container">
+        <h3>Pruduct: {{ item.footwear.name }}</h3>
+        <h3>User: {{ item.first_name }}</h3>
+    </div>
+{% endfor %}
+
+</body>
+</html>

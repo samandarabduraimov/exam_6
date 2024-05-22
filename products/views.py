@@ -155,14 +155,3 @@ class CheapProduct(View):
         sorted_cheap = products.order_by('price')[:3]
 
         return render(request, 'footwear/cheap.html', {'products': sorted_cheap})
-
-
-
-
-
-
-
-
-
-
-

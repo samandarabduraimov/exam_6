@@ -37,12 +37,12 @@
     </div>
 
     <div class="Footwear">
-        {% for product in footwear %}
+        {% for products in footwear %}
             <div class="footwear-list">
                 <img src="{{ footwear.image.url }}" alt="{{ footwear.name }}">
                 <h3> Name: {{ footwear.name }}</h3>
                 <p>Price: {{ footwear.price }}</p>
-                <a href="{% url 'products:footwear-delete' pk=footwear.pk %}">Delete</a>
+                <a href="{% url 'products:footwear-delete' footwear.pk %}">Delete</a>
             </div>
         {% endfor %}
     </div>

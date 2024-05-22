@@ -13,13 +13,13 @@
     <h1 style="text-align: center">Category All</h1>
 
     <div class="products-container">
-        {% for f in detail_all %}
+        {% for f in footwear %}
             <div class="footwear-list">
                 <img src="{{ f.image.url }}" alt="Footwear Image">
                 <a>{{ f.name }}</a>
                 <a>{{ f.price }}</a>
                 <a href="{% url 'products:detail-review' f.pk%}">Detail</a>
-                <a href="{% url 'products:gul-delete' f.pk%}">Delete</a>
+                <a href="{% url 'products:footwear-delete' f.pk%}">Delete</a>
             </div>
         {% endfor %}
     </div>
